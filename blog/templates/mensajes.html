@@ -1,0 +1,12 @@
+{% for mensaje in mensajes %}
+<div>
+    <h2>
+        {{mensaje.nombre}}
+    </h2>
+    <p class="grey-text">Comentado el {{mensaje.fecha}}</p>
+    <p class="white-text">
+        {{mensaje.mensaje}}
+    <p>
+    <div class="divider"></div>
+</div>
+{% endfor %}

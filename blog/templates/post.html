@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+<article>
+    <div class="row">
+        <a href="{% url 'app_blog:home' %}" class="btn-flat col s3 grey-text"><i class="fa fa-angle-double-left"></i> Atras</a>
+    </div>
+    <h2 class="center">{{post.titulo}}</h2>
+
+
+    <h5 class="grey-text">Posted by {{post.autor}}</h5>
+    <h4 class="grey-text">{{post.fecha}}</h3>
+
+    <p class="white-text">{{post.contenido}} </p>
+</article>
+<div class="row">
+    <h3 class="teal-text text-lighten-2">Comentarios</h3>
+    {% csrf_token %} 
+    <div class="row">
+        <div class="input-field">
+            <input name="nombre" type="text" class="form-control" style="color:white" id="name" required data-validation-required-message="Please enter your name.">
+            <label class="white-text" for="name">Nombre</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field">
+            <textarea name="mensaje" rows="5" class="materialize-textarea" style="color:white" id="message" required data-validation-required-message="Please enter a message."></textarea>
+            <label for="message" class="white-text">Mensaje</label>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="form-group col-xs-12">
+            <button id="send_ajax" class="btn-large btn-primary"> Comment </button>
+        </div>
+    </div> 
+    <div id="mensajes">
+        {% include "mensajes.html" %}
+    </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+
+<script>
+
+    $("#send_ajax").click(function(){        
+
+        var data={
+            csrfmiddlewaretoken: '{{ csrf_token }}',
+            id:'{{post.id}}',
+            nombre:$('#name').val(),
+            mensaje:$('#message').val(),
+        }
+        $.ajax({
+            type: "POST",
+            url: "{% url 'app_blog:save_message' %}",
+            data: data,
+            success: function(result){
+                $("#mensajes").html(result);
+            },
+            error: function(err){
+                console.log("ERRRORRRR");
+                console.log(err.responseText);
+            },
+        });
+    });
+</script>
+
+
+{% endblock %}

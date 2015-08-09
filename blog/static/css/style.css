@@ -1,0 +1,149 @@
+body {
+    background: url(img/fondo.gif);
+    font-family: "Arial";
+}
+
+.titulo {
+    color: #64ffda;
+    text-align: center;
+    font-style: bold;
+}
+
+h2 {
+    font-size: 25px;
+    font-style: bold;
+    color: #64ffda;
+    padding: 5px;
+}
+
+.noticias {
+    background: url(img/fondoNot%20.png) no-repeat fixed;
+    color: white;
+    width: 92%;
+    float: right;
+    padding: 10px;
+}
+
+.elementos{
+    font-style: bold;
+    font-style: oblique;
+}
+
+.imagen_pers{
+    width: 10%;
+    margin: 0 70%;
+    float: right;
+    position: absolute;
+}
+.required{
+    font-size: 15px;
+}
+
+.content, ul{
+    padding: 5px
+}
+
+.input, select {
+    font: 13px helvetica,arial,sans-serif;
+}
+
+.input_text {
+    padding: 4px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #848484 #C1C1C1 #E1E1E1;
+    background: none repeat scroll 0% 0% #FFF;
+    border-radius: 2px;
+}
+
+.campos{
+    list-style-type: none;
+    color: white;
+}
+.campos, idcampo{
+    width: 30%
+}
+.btnRegistro{
+    float: left;
+}
+
+.content{
+    width: 90%;
+    float: right;
+    background: url(img/fondoNot%20.png)no-repeat fixed;
+}
+.btn{
+    width: 45px;
+    height: 45px;
+    margin: 5px;
+}
+
+.btnEnviar {
+    float: left;
+    width: 100;
+    height: 45;
+    margin-left: 5%;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+}
+
+#imagenes {
+    padding: 5px 5px;
+}
+
+#laBarra{
+    width: 100%;
+    float: left;
+    padding: 5px;
+}
+
+.ui-progressbar {
+     position: relative;
+     width: 43.5%;
+}
+.progress-label {
+    position: absolute;
+    width: 37%;
+    left: 50%;
+    top: 4px;
+    font-weight: bold;
+}
+
+#empezar{
+    width: 100;
+    height: 45;
+    margin-left: 5;
+}
+#stop{
+    width: 100;
+    height: 45;
+    margin-left: 5;
+}
+#continue{
+    width: 100;
+    height: 45;
+    margin-left: 5;
+}
+#restart{
+    width: 100;
+    height: 45;
+    margin-left: 5;
+}
+.txb_Montos{
+    width: 217px;
+    margin: 5px 5px;
+}
+
+.btnConvert {
+    margin: 5px;
+}
+
+#reloj{
+    font-size: 150%;
+    color: white;
+}
+
+#vueltas{
+    font-size: 150%;
+    color: white;
+}

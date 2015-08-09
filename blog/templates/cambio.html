@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<div class=titulo>
+    <h1>CAMBIO DE MONEDA</h1>
+</div>
+<div class="row">
+    <div id=txb1 class="col offset-s1 s2">
+        <input class="txb_Montos white-text" type="text" id=txbMonto1>
+    </div>
+    <div class="input-field col s2">
+        <select class="white-text" id="cmb1">
+            <option value="dolar">Dolares</option>
+            <option value="argentinos">Pesos Argentinos</option>
+            <option value="euros">Euros</option>
+            <option value="libras">Libras</option>
+            <option value="chilenos">Pesos Chilenos </option>
+            <option value="uruguayos">Pesos Uruguayos </option>
+            <option value="reales">Reales</option>
+        </select>
+    </div>
+    <input type="button" class="btn col s1" id="btnConvert" onclick="ejecutar(this)" value="Convert">
+    <input type="button" class="btn col s1" id="btnClear" onclick="ejecutar(this)" value="Clear">
+    <div class="input-field col s2">
+        <select class="white-text" id="cmb2">
+            <option value="dolar">Dolares</option>
+            <option value="argentinos">Pesos Argentinos</option>
+            <option value="euros">Euros</option>
+            <option value="libras">Libras</option>
+            <option value="chilenos">Pesos Chilenos </option>
+            <option value="uruguayos">Pesos Uruguayos </option>
+            <option value="reales">Reales</option>
+        </select> 
+    </div>
+    <div id=txb2 class="col s2">
+        <input class="txb_Montos white-text" type="text" id=txbMonto2 value="">
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script type="text/javascript" src="{% static 'js/cambio.js'%}"></script>
+{% endblock %}

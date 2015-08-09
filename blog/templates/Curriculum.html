@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<div class=titulo>
+    <h1>CURRICULUM VITAE</h1>
+</div>
+<h2>Datos Personales:</h2>
+<div class="imagen_pers">
+    <div class="divider"></div>
+    <img src="{% static 'img/Andy.png' %}" width="100px" height="120px" class="center">
+    <div class="divider"></div>
+</div>
+<br>
+<ul class="white-text">
+    <li><b>Nombre:</b> Rodrigo Toledo Alonso</li><br>
+    <li><b>Edad:</b> 17</li><br>
+    <li><b>Fecha de Nacimiento:</b> 34/15/27</li><br>
+    <li><b>DNI:</b> 93 856 831</li><br>
+    <li><b>Tel:</b> 152 123 456</li><br>
+    <li><b>Mail:</b> rodry.toledo@gmail.com</li><br>
+</ul>
+<hr>
+</div>
+<div class="container">
+    <h2>Formacion Academica:</h2>
+    <br>
+    <ul class="white-text">
+        <li><b>Ingles:</b> Un poco</li><br>
+        <li><b>Secundario:</b> En proceso...</li><br>
+    </ul>
+</div>
+{% endblock %}

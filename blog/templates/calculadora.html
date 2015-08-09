@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<div class="center">
+    <div class="row">
+    <input class="txb_Resultado col s4 offset-s4" type="text" id=txbResultado value="">
+    </div>
+    <div class="row">
+    <input type="button" class="btn col s1 offset-s4" id="btn7" onclick="ejecutar(this)" value="7">
+    <input type="button" class="btn col s1" id="btn8" onclick="ejecutar(this)" value="8">
+    <input type="button" class="btn col s1" id="btn9" onclick="ejecutar(this)" value="9">
+    <input type="button" class="btn col s1" id="btnMultip" onclick="ejecutar(this)" value="*">
+    </div>
+    <div class="row">
+    <input type="button" class="btn col s1 offset-s4" id="btn4" onclick="ejecutar(this)" value="4">
+    <input type="button" class="btn col s1" id="btn5" onclick="ejecutar(this)" value="5">
+    <input type="button" class="btn col s1" id="btn6" onclick="ejecutar(this)" value="6">
+    <input type="button" class="btn col s1" id="btnMenos" onclick="ejecutar(this)" value="-">
+    </div>
+    <div class="row">
+    <input type="button" class="btn col s1 offset-s4" id="btn1" onclick="ejecutar(this)" value="1">
+    <input type="button" class="btn col s1" id="btn2" onclick="ejecutar(this)" value="2">
+    <input type="button" class="btn col s1" id="btn3" onclick="ejecutar(this)" value="3">
+    <input type="button" class="btn col s1" id="btnMas" onclick="ejecutar(this)" value="+">
+</div>
+    <div class="row">
+    <input type="button" class="btn col s1 offset-s4" id="btn0" onclick="ejecutar(this)" value="0">
+    <input type="button" class="btn col s1" id="btnSeparador" onclick="ejecutar(this)" value=".">
+    <input type="button" class="btn col s1" id="btnDivision" onclick="ejecutar(this)" value="/">
+    <input type="button" class="btn col s1" id="btnIgual" onclick="ejecutar(this)" value="=">
+</div>
+    <div class="row">
+    <input type="button" class="btn col s2 offset-s4" id="btnClean" onclick="ejecutar(this)" value="C">
+</div>
+</div>
+    {% endblock %}
+
+{% block scripts %}
+    <script type="text/javascript" src="{% static 'js/calculadora.js'%}"></script>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    {% for post in posts %}
+<div class="row">
+    <div class="card col offset-l3 l6 s12 blue-grey darken-3">
+        <a class="center card-content" href="{% url 'app_blog:vermipost' post.id %}">
+            <h3 class="center  card-title teal-text text-lighten-2">
+                {{post.titulo}}
+            </h3>
+            <h5 class="light card-title teal-text text-lighten-2">
+                {{post.resumen}}
+            </h5>
+        </a>
+        <p class="white-text">Posteado por {{post.autor}}</p>
+    </div>
+</div>
+<div class="divider"></div>
+    {% endfor %}
+{% endblock %}

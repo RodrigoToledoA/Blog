@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<div class="titulo">
+            <h1>FORO</h1>
+        </div>
+            <h2>Dejanos un comentario:</h2>
+            <ul>
+            <li><label class="idCampo">Nombre: </label><input type='text' class='nombre' id='display_name' size='50' maxlength='15' value='' name='members_display_name' tabindex='1'/></li>
+            <span class='restriction'>Entre 3 y 15 caracteres</span>
+        <li><label class="idCampo">Tema: </label><input type='text' class='nombre' id='display_name' size='50' maxlength='20' value='' name='members_display_name' tabindex='1'/></li>
+                <li><label class="idCampo">Comentario: </label><br><textarea rows="10" cols="50"></textarea></li>
+                </ul>
+            <button class="btn" style="width: 17%;" id="btnMensaje" type="button" onmouseover="ejecutar(this)" >Enviar Mensaje</button>
+{% endblock %}
+
+{% block scripts %}
+<script type="text/javascript" src="{% static 'js/trollBtn.js'%}"></script>
+{% endblock %}

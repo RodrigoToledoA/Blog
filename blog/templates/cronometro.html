@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+            <div class="titulo">
+                <h2>CRONOMETRO</h2>
+            </div>
+            <div id=elCrono class="center">
+                <div id=reloj class="row">
+                    00 : 00 : 00
+                </div>
+                <div class="row">
+                <div id=btnPlay_Restart>
+                    <a class="btn offset-s4 col s1" id=empezar onclick="iniciar()" href="#"><i class="fa fa-play fa-fw fa-2x"></i></a>    
+                </div>
+                    <a class="btn col s2" id=stop onclick="parar()" href="#"><i class="fa fa-pause fa-fw fa-2x"></i></a>
+                    <a class="btn col s1" id=Reset onclick="reiniciar()"href="#"><i class="fa fa-stop fa-fw fa-2x"></i></a>
+                    </div>
+                <div id="vueltas">
+                </div>
+            </div>
+{% endblock %}
+
+{% block scripts %}
+<script type="text/javascript" src="{% static 'js/cronometro.js'%}"></script>
+{% endblock %}
